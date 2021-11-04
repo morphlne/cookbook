@@ -1,5 +1,8 @@
 .idea/
-.openapi-generator/
 target/
-src/main/java/
+build/
+gradle/
+.gradle/
+gradlew
+gradlew.bat
 *.iml
