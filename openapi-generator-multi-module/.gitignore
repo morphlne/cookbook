@@ -1,0 +1,5 @@
+.idea/
+.openapi-generator/
+target/
+user-api/src/main/java/
+*.iml
