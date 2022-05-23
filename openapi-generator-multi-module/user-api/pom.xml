@@ -55,7 +55,7 @@
                             <configOptions>
                                 <useTags>true</useTags>
                                 <openApiNullable>false</openApiNullable>
-                                <java8>false</java8>
+                                <skipDefaultInterface>true</skipDefaultInterface>
                                 <interfaceOnly>true</interfaceOnly>
                             </configOptions>
                         </configuration>
