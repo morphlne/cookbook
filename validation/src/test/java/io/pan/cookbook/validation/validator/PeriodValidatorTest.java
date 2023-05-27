@@ -1,10 +1,9 @@
 package io.pan.cookbook.validation.validator;
 
-import io.pan.cookbook.validation.dto.Period;
 import org.junit.jupiter.api.Test;
 
-import java.time.LocalDate;
-
+import static io.pan.cookbook.validation.TestUtil.consistentPeriod;
+import static io.pan.cookbook.validation.TestUtil.inconsistentPeriod;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -13,10 +12,7 @@ public class PeriodValidatorTest extends ValidatorTest {
 
     @Test
     public void consistentPeriod_validate_noErrors() {
-        var period = new Period(
-                LocalDate.of(2020, 1, 1),
-                LocalDate.of(2021, 1, 1)
-        );
+        var period = consistentPeriod();
 
         var errors = validationResult(period);
 
@@ -25,10 +21,7 @@ public class PeriodValidatorTest extends ValidatorTest {
 
     @Test
     public void inconsistentPeriod_validate_expectedError() {
-        var period = new Period(
-                LocalDate.of(2021, 1, 1),
-                LocalDate.of(2020, 1, 1)
-        );
+        var period = inconsistentPeriod();
 
         var errors = validationResult(period);
 
